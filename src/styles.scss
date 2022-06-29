@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+.ob-form-error{
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.ob-button{
+    background:rgb(220, 133, 52);
+    border-color: rgb(220, 133, 52);
+    border-radius:100px;
+}
+
+button:disabled,
+button[disabled]{
+    background:rgb(220, 133, 52)!important;
+    border-color: rgb(220, 133, 52)!important;
+    border-radius:100px;
+}
+
+button:hover{
+    background-color:black!important;
+    border-color: black!important;
+}
+.ob-heading{
+    color:rgb(220, 133, 52);
+    font-weight: bold;
+}

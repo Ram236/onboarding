@@ -1,0 +1,34 @@
+<form [formGroup]="obAddressForm" novalidate *ngIf="obAddressData">
+    
+    <div class="form-group mt-4">
+        <label for="streetNumber" class="mb-2">Street Number</label>
+        <input type="text" class="form-control" id="streetNumber" formControlName='streetNumber' [(ngModel)]="obAddressData.location.street.number" (change)="sendAddressValidation()" >
+        <span class="ob-form-error" *ngIf=" addressForm['streetNumber'].hasError('required')">Please enter street number</span>
+    </div>
+    <div class="form-group mt-4">
+        <label for="streetName" class="mb-2">Street Name</label>
+        <input type="text" class="form-control" id="streetName" formControlName='streetName' [(ngModel)]="obAddressData.location.street.name" (change)="sendAddressValidation()" >
+        <span class="ob-form-error" *ngIf=" addressForm['streetName'].hasError('required')">Please enter street name</span>
+    </div>
+    <div class="form-group  mt-4">
+        <label for="city" class="mb-2">City</label>
+        <input type="text" class="form-control" id="city" formControlName='city' [(ngModel)]="obAddressData.location.city" (change)="sendAddressValidation()" >
+        <span class="ob-form-error" *ngIf=" addressForm['city'].hasError('required')">Please enter city</span>
+    </div>
+    <div class="form-group mt-4">
+        <label for="state" class="mb-2">State</label>
+        <input type="text" class="form-control" id="state" formControlName='state' [(ngModel)]="obAddressData.location.state" (change)="sendAddressValidation()" >
+        <span class="ob-form-error" *ngIf=" addressForm['state'].hasError('required')">Please enter city</span>
+    </div>
+    <div class="form-group mt-4">
+        <label for="country" class="mb-2">Country</label>
+        <input type="text" class="form-control" id="country" formControlName='country' [(ngModel)]="obAddressData.location.country" (change)="sendAddressValidation()" >
+        <span class="ob-form-error" *ngIf=" addressForm['country'].hasError('required')">Please enter state</span>
+    </div>
+    <div class="form-group  mt-4">
+        <label for="postcode" class="mb-2">PostCode</label>
+        <input type="text" class="form-control" id="postcode" formControlName='postcode' [(ngModel)]="obAddressData.location.postcode" (change)="sendAddressValidation()" >
+        <span class="ob-form-error" *ngIf=" addressForm['postcode'].hasError('required')">Please enter postcode</span>
+    </div>
+    
+</form>
